@@ -1,11 +1,11 @@
 package com.paligot.kighlighter.core
 
-interface LanguagePattern {
+interface LanguagePattern<T : ColorScheme> {
     val pattern: Regex
-    fun color(colorScheme: ColorScheme): Color
+    fun color(colorScheme: T): Color
 }
 
-expect fun LanguagePattern.findAllSnippetRanges(snippet: String, colorScheme: ColorScheme): Sequence<SnippetRange>
+expect fun <T : ColorScheme> LanguagePattern<T>.findAllSnippetRanges(snippet: String, colorScheme: T): Sequence<SnippetRange>
 
-fun LanguagePattern.matches(snippet: String, colorScheme: ColorScheme): List<SnippetRange> =
+fun <T : ColorScheme> LanguagePattern<T>.matches(snippet: String, colorScheme: T): List<SnippetRange> =
     findAllSnippetRanges(snippet, colorScheme).toList()

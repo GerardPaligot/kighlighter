@@ -9,26 +9,30 @@ Desktop.
 ```kotlin
 Kighlighter(
     snippet = yourCode,
-    language = Kotlin(),
-    colorScheme = DraculaColorScheme,
+    language = Kotlin(palette = Palettes.Dracula),
     modifier = Modifier.height(300.dp)
 )
 ```
 
 ## Customization
 
-### Language
-
-If your language isn't available in the library, you can create your
-own language in your project or make a pull request. You just need 
-to create a new class which extends `Language` interface and create an 
-object for each highlighted code concept.
-
 ### ColorScheme
 
-If you want your own theme for the highlighted code, you can create 
-a color scheme object with the `ColorScheme` interface to specify
-rgb colors for all concept supported by the library.
+If you don't like any palettes provided by the library, you can create
+your own palette, the color scheme of the supported language and provide
+the palette when you create the language object.
+
+When you create your palette object, add the sealed interface as interface
+of your own palette.
+
+When you create your color scheme value class, add the language color scheme 
+interface of your own color scheme (e.g. `KotlinColorScheme`).
+
+Finally, you can give your palette in the language class:
+
+```kotlin
+Kotlin(palette = YourOwnPalette)
+```
 
 ## Download
 

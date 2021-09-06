@@ -4,16 +4,15 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.paligot.kighlighter.compose.Kighlighter
-import com.paligot.kighlighter.colorscheme.DraculaColorScheme
-import com.paligot.kighlighter.colorscheme.PrismColorScheme
 import com.paligot.kighlighter.components.kotlin.Kotlin
+import com.paligot.kighlighter.components.xml.Xml
+import com.paligot.kighlighter.compose.Kighlighter
+import com.paligot.kighlighter.palettes.Palettes
 
 fun main() = Window {
     Kighlighter(
-        snippet = code,
-        language = Kotlin(),
-        colorScheme = DraculaColorScheme,
+        snippet = xmlSample,
+        language = Xml(palette = Palettes.Prism),
         modifier = Modifier.height(300.dp)
     )
 }
@@ -24,8 +23,8 @@ fun main() = Window {
 @Composable
 fun KighlighterPreview() {
     Kighlighter(
-        snippet = code,
-        language = Kotlin(),
-        colorScheme = DraculaColorScheme
+        snippet = kotlinSample,
+        language = Kotlin(palette = Palettes.Dracula)
     )
 }
+

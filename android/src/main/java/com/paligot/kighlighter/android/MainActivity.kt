@@ -1,11 +1,11 @@
 package com.paligot.kighlighter.android
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.compose.setContent
-import com.paligot.kighlighter.compose.Kighlighter
-import com.paligot.kighlighter.colorscheme.DraculaColorScheme
+import androidx.appcompat.app.AppCompatActivity
 import com.paligot.kighlighter.components.kotlin.Kotlin
+import com.paligot.kighlighter.compose.Kighlighter
+import com.paligot.kighlighter.palettes.DraculaColorPalette
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,8 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             Kighlighter(
                 snippet = code,
-                language = Kotlin(),
-                colorScheme = DraculaColorScheme
+                language = Kotlin(palette = DraculaColorPalette)
             )
         }
     }

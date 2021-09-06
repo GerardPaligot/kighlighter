@@ -1,4 +1,4 @@
-const val code = """
+const val kotlinSample = """
 // Inline doc
 class Test {
     fun foo() {}
@@ -65,4 +65,16 @@ data class SnippetRange(
     val range: IntRange,
     val color: Color = Color.Unspecified
 )
+"""
+const val xmlSample = """<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ma page de test</title>
+  </head>
+  <body>
+    <!-- A sample comment -->
+    <img src="images/firefox-icon.png" alt="Mon image de test">
+  </body>
+</html>
 """

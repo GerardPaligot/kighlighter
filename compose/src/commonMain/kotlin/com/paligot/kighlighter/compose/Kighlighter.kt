@@ -21,21 +21,20 @@ import com.paligot.kighlighter.core.Language
 import com.paligot.kighlighter.core.SnippetRange
 
 @Composable
-fun Kighlighter(
+fun <T: ColorScheme> Kighlighter(
     snippet: String,
-    language: Language,
-    colorScheme: ColorScheme,
+    language: Language<T>,
     modifier: Modifier = Modifier,
     textStyle: TextStyle = KTypography.jetbrainsMono.body2,
     paddingValues: PaddingValues = PaddingValues(horizontal = 8.dp)
 ) {
     val ranges by produceState(emptyList<SnippetRange>()) {
-        value = com.paligot.kighlighter.Kighlighter(language, colorScheme).apply(snippet)
+        value = com.paligot.kighlighter.Kighlighter(language).apply(snippet)
     }
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .background(colorScheme.background.toComposeColor()),
+            .background(language.colorScheme.background.toComposeColor()),
         contentPadding = paddingValues
     ) {
         item {
@@ -51,7 +50,7 @@ fun Kighlighter(
                         }
                     }
                 },
-                color = colorScheme.contentColor.toComposeColor(),
+                color = language.colorScheme.contentColor.toComposeColor(),
                 style = textStyle
             )
         }
