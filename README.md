@@ -36,7 +36,21 @@ Kotlin(palette = YourOwnPalette)
 
 ## Download
 
-Not yet available on Maven Central.
+Release artifacts aren't available yet but if you want to test latest changes merge 
+in `main` branch, you can test snapshot artifacts.
+
+```kotlin
+repositories {
+    maven {
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
+}
+
+// Android artifact
+implementation("com.paligot.kighlighter:kighlighter-compose:1.0.0-SNAPSHOT")
+// Desktop artifact
+implementation("com.paligot.kighlighter:kighlighter-compose-desktop:1.0.0-SNAPSHOT")
+```
 
 ## License
 
