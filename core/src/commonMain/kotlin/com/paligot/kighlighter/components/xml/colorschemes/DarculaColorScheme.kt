@@ -1,21 +1,21 @@
 package com.paligot.kighlighter.components.xml.colorschemes
 
 import com.paligot.kighlighter.core.Color
-import com.paligot.kighlighter.palettes.DraculaColorPalette
+import com.paligot.kighlighter.palettes.DarculaColorPalette
 import kotlin.jvm.JvmInline
 
 @JvmInline
-internal value class DraculaColorScheme(private val dracula: DraculaColorPalette): XmlColorScheme {
+internal value class DarculaColorScheme(private val darcula: DarculaColorPalette): XmlColorScheme {
     override val background: Color
-        get() = dracula.black
+        get() = darcula.black
     override val contentColor: Color
-        get() = dracula.greyLight
+        get() = darcula.greyLight
     override val attributes: Color
-        get() = dracula.orange
+        get() = darcula.orange
     override val comments: Color
-        get() = dracula.grey
+        get() = darcula.grey
     override val elements: Color
-        get() = dracula.yellow
+        get() = darcula.yellow
     override val strings: Color
-        get() = dracula.green
+        get() = darcula.green
 }

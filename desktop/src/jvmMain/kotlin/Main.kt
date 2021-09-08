@@ -24,7 +24,7 @@ fun main() = Window {
 fun KighlighterPreview() {
     Kighlighter(
         snippet = kotlinSample,
-        language = Kotlin(palette = Palettes.Dracula)
+        language = Kotlin(palette = Palettes.Darcula),
     )
 }
 

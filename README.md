@@ -9,7 +9,7 @@ Desktop.
 ```kotlin
 Kighlighter(
     snippet = yourCode,
-    language = Kotlin(palette = Palettes.Dracula),
+    language = Kotlin(palette = Palettes.Darcula),
     modifier = Modifier.height(300.dp)
 )
 ```
