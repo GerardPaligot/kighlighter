@@ -11,8 +11,9 @@ import com.paligot.kighlighter.palettes.Palettes
 
 fun main() = Window {
     Kighlighter(
-        snippet = xmlSample,
-        language = Xml(palette = Palettes.Prism),
+        snippet = kotlinSample,
+        language = Kotlin(palette = Palettes.Prism),
+        linesHighlighted = arrayListOf(3, 6, 7),
         modifier = Modifier.height(300.dp)
     )
 }

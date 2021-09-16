@@ -8,6 +8,8 @@ import kotlin.jvm.JvmInline
 internal value class PrismColorScheme(private val prism: PrismColorPalette): XmlColorScheme {
     override val background: Color
         get() = prism.white
+    override val highlighted: Color
+        get() = prism.whiteoff
     override val contentColor: Color
         get() = prism.black
     override val attributes: Color

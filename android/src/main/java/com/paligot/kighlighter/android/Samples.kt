@@ -3,7 +3,7 @@ package com.paligot.kighlighter.android
 const val code = """
 // Inline doc
 class Test {
-    fun foo() {}/home/gpaligot/IdeaProjects/kighlighter/android/src/main/java/com/paligot/kighlighter/android
+    fun foo() {}
 }
 
 /**

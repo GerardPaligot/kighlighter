@@ -8,6 +8,8 @@ import kotlin.jvm.JvmInline
 internal value class DarculaColorScheme(private val darcula: DarculaColorPalette): XmlColorScheme {
     override val background: Color
         get() = darcula.black
+    override val highlighted: Color
+        get() = darcula.blackoff
     override val contentColor: Color
         get() = darcula.greyLight
     override val attributes: Color

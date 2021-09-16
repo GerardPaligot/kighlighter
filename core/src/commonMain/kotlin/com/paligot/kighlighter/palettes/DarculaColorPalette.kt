@@ -5,6 +5,7 @@ import com.paligot.kighlighter.core.rgb
 
 object DarculaColorPalette: Palette {
     val black: Color = rgb(43, 43, 43)
+    val blackoff: Color = rgb(50, 50, 50)
     val grey: Color = rgb(128, 128, 128)
     val greyLight: Color = rgb(169, 183, 198)
     val blue: Color = rgb(104, 151, 187)

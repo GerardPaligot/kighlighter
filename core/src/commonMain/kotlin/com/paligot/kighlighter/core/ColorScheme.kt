@@ -2,6 +2,7 @@ package com.paligot.kighlighter.core
 
 interface ColorScheme {
     val background: Color
+    val highlighted: Color
     val contentColor: Color
 }
 

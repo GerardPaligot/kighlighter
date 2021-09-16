@@ -6,6 +6,7 @@ import com.paligot.kighlighter.core.rgb
 
 object PrismColorPalette: Palette {
     val white: Color = rgb(248, 245, 236)
+    val whiteoff: Color = rgb(248, 245, 150)
     val black: Color = rgb(7, 7, 7)
     val grey: Color = rgb(147, 161, 161)
     val pink: Color = rgb(221, 74, 104)
