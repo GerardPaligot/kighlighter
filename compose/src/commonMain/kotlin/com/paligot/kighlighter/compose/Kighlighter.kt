@@ -3,6 +3,7 @@ package com.paligot.kighlighter.compose
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -55,7 +56,7 @@ fun <T : ColorScheme> Kighlighter(
                 },
                 color = language.colorScheme.contentColor.toComposeColor(),
                 style = textStyle,
-                modifier = Modifier.drawBehind {
+                modifier = Modifier.fillMaxWidth().drawBehind {
                     linesHighlightedConfig.forEach {
                         drawRect(
                             color = language.colorScheme.highlighted.toComposeColor(),
