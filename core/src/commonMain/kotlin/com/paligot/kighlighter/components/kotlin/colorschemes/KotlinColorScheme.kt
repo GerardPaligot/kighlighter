@@ -8,6 +8,7 @@ interface KotlinColorScheme: ColorScheme {
     val invocations: Color
     val functions: Color
     val keywords: Color
+    val namedArguments: Color
     val operators: Color
     val numbers: Color
     val strings: Color

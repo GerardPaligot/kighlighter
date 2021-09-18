@@ -20,6 +20,8 @@ internal value class PrismColorScheme(private val prism: PrismColorPalette): Kot
         get() = prism.pink
     override val keywords: Color
         get() = prism.blue
+    override val namedArguments: Color
+        get() = prism.black
     override val operators: Color
         get() = prism.brown
     override val numbers: Color

@@ -13,7 +13,7 @@ fun main() = application {
     Window(onCloseRequest = ::exitApplication) {
         Kighlighter(
             snippet = kotlinSample,
-            language = Kotlin(palette = Palettes.Prism),
+            language = Kotlin(palette = Palettes.Darcula),
             linesHighlighted = arrayListOf(3, 6, 7),
             modifier = Modifier.height(300.dp)
         )

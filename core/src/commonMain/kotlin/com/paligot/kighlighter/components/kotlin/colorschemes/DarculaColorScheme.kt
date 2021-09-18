@@ -20,10 +20,12 @@ internal value class DarculaColorScheme(private val darcula: DarculaColorPalette
         get() = darcula.yellow
     override val keywords: Color
         get() = darcula.orange
+    override val namedArguments: Color
+        get() = darcula.blue
     override val operators: Color
         get() = contentColor
     override val numbers: Color
-        get() = darcula.blue
+        get() = darcula.blueLight
     override val strings: Color
         get() = darcula.green
     override val annotations: Color

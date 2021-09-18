@@ -25,6 +25,7 @@ class Kotlin(private val palette: Palette): Language<KotlinColorScheme> {
         OperatorsPattern,
         NumbersPattern,
         StringsPattern,
-        AnnotationsPattern
+        AnnotationsPattern,
+        NamedArgumentsPattern
     )
 }
