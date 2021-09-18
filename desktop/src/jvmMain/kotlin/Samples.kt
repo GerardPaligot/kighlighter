@@ -1,7 +1,9 @@
 const val kotlinSample = """
 // Inline doc
 class Test {
-    fun foo() {}
+    suspend fun foo() = coroutineScope {
+        return@coroutineScope ""
+    }
 }
 
 /**
